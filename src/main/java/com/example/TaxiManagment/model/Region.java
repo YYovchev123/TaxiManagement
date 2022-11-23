@@ -3,6 +3,7 @@ package com.example.TaxiManagment.model;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @AllArgsConstructor
@@ -17,6 +18,7 @@ public class Region {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ID;
 
-    @Column(name = "region")
+    @NotNull
+    @Column(name = "region", unique = true)
     private String region;
 }

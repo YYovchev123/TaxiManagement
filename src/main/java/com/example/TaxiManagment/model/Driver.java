@@ -5,8 +5,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.time.Instant;
-import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -21,31 +21,37 @@ public class Driver{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ID;
 
+    @NotNull
     @Column(name = "first_name")
     private String firstName;
 
+    @NotNull
     @Column(name = "last_name")
     private String lastName;
 
+    @NotNull
     @Column(name = "age")
     private int age;
 
+    @NotNull
     @Column(name = "password")
     private String password;
 
+    @NotNull
     @Column(name = "email", unique = true)
     @Email
     private String email;
 
+    @NotNull
     @Column(name = "phone", unique = true)
     private String phone;
 
+    @NotNull
     @OneToOne
     private Taxi taxi;
 
-    @OneToMany
-    @JoinColumn(name = "region_id")
-    private Set<Region> region;
+    @OneToOne
+    private Region region;
 
     @Column(name = "created")
     @CreationTimestamp
