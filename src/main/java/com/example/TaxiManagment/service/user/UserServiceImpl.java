@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public User update(User updatedUser, long Id) {
         User user = findById(Id);
         return update(user, updatedUser);

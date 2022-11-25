@@ -27,7 +27,7 @@ public class TaxiServiceImpl implements TaxiService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public Taxi update(Taxi updatedTaxi, long id) {
         Taxi taxi = findById(id);
         return update(taxi, updatedTaxi);

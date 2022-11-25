@@ -1,5 +1,6 @@
 package com.example.TaxiManagment.model;
 
+import com.example.TaxiManagment.model.status.DriverStatus;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -57,6 +58,6 @@ public class Driver{
     @CreationTimestamp
     private Instant created;
 
-    @Column(name = "is_busy")
-    private boolean isBusy;
+    @Column(name = "status")
+    private DriverStatus status;
 }

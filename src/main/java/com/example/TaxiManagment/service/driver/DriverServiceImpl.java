@@ -57,7 +57,7 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public Driver update(Driver updatedDriver, long id) {
         Driver driver = findById(id);
         return update(driver, updatedDriver);
@@ -76,7 +76,9 @@ public class DriverServiceImpl implements DriverService {
         if (updatedDriver.getLastName() != null) {
             driver.setLastName(updatedDriver.getLastName());
         }
-        if (updatedDriver.getAge() >= 18) {
+        if (updatedDriver.getAge() < 18) {
+            throw new RecordBadRequestException("The driver must be 18 years old or older!");
+        } else {
             driver.setAge(updatedDriver.getAge());
         }
         if (updatedDriver.getPassword() != null) {

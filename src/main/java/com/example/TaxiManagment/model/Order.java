@@ -1,5 +1,6 @@
 package com.example.TaxiManagment.model;
 
+import com.example.TaxiManagment.model.status.OrderStatus;
 import lombok.*;
 
 import javax.persistence.*;
@@ -42,7 +43,7 @@ public class Order {
     @Column(name = "created")
     private Instant created;
 
-    @Column(name = "is_finished")
-    private boolean isFinished;
+    @Column(name = "status")
+    private OrderStatus status;
 
 }

@@ -32,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public Order update(Order updatedOrder, long id) {
         Order order = findById(id);
         return update(order, updatedOrder);
