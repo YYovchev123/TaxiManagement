@@ -10,11 +10,10 @@ import com.example.TaxiManagment.model.status.DriverStatus;
 import com.example.TaxiManagment.service.region.RegionService;
 import com.example.TaxiManagment.service.taxi.TaxiService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Converter;
-
-@Converter
 @AllArgsConstructor
+@Component
 public class DriverConverter {
 
     private final TaxiService taxiService;

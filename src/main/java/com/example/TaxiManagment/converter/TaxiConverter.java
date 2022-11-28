@@ -3,14 +3,12 @@ package com.example.TaxiManagment.converter;
 import com.example.TaxiManagment.dataTransferObject.taxi.TaxiResponse;
 import com.example.TaxiManagment.dataTransferObject.taxi.TaxiSaveRequest;
 import com.example.TaxiManagment.dataTransferObject.taxi.TaxiUpdateRequest;
-import com.example.TaxiManagment.model.Order;
 import com.example.TaxiManagment.model.Taxi;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Converter;
-
-@Converter
 @AllArgsConstructor
+@Component
 public class TaxiConverter {
 
     public Taxi convert(TaxiSaveRequest taxiSaveRequest) {

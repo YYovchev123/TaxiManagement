@@ -5,11 +5,10 @@ import com.example.TaxiManagment.dataTransferObject.user.UserSaveRequest;
 import com.example.TaxiManagment.dataTransferObject.user.UserUpdateRequest;
 import com.example.TaxiManagment.model.User;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Converter;
-
-@Converter
 @AllArgsConstructor
+@Component
 public class UserConverter {
 
     public User convert(UserSaveRequest userSaveRequest) {

@@ -12,11 +12,10 @@ import com.example.TaxiManagment.service.driver.DriverService;
 import com.example.TaxiManagment.service.region.RegionService;
 import com.example.TaxiManagment.service.user.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Converter;
-
-@Converter
 @AllArgsConstructor
+@Component
 public class OrderConverter {
 
     private final DriverService driverService;

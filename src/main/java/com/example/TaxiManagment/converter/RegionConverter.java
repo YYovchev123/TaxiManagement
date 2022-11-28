@@ -4,11 +4,10 @@ import com.example.TaxiManagment.dataTransferObject.region.RegionResponse;
 import com.example.TaxiManagment.dataTransferObject.region.RegionSaveRequest;
 import com.example.TaxiManagment.model.Region;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import javax.persistence.Converter;
-
-@Converter
 @AllArgsConstructor
+@Component
 public class RegionConverter {
 
     public Region convert(RegionSaveRequest regionSaveRequest) {
